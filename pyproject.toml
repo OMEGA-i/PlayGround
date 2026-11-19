@@ -1,0 +1,36 @@
+[project]
+license = {text = "Apache-2.0"}
+name = "omega-playground"
+version = "0.1.0"
+description = "Humanoid robotics playground: Player -> Joystick -> WBC Policy, GPU MJWarp"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "torch",
+    "numpy",
+    "wsproto==1.2.0",
+]
+
+[project.optional-dependencies]
+mjwarp = ["warp-lang==1.17.0", "mujoco-warp==3.12.0", "mujoco~=3.12.0",
+          "trimesh==5.1.1", "usd-core==26.3", "pillow>=11.3.0", "scipy>=1.15"]
+sonic = ["onnxruntime==1.30.0", "scipy>=1.15"]
+sonic-cuda = ["onnx==1.20.1", "onnxruntime==1.30.0", "scipy>=1.15"]
+navigation = ["pillow>=11.3.0", "scipy>=1.15"]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+omega-playground = "omega_playground.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/omega_playground"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+src = ["src", "tests"]

@@ -1,0 +1,16 @@
+# Run outputs, policy packages, scene copies, maps and QC evidence
+/artifacts/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+
+# OS / editors
+.DS_Store
+imgui.ini

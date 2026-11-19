@@ -1,0 +1,167 @@
+{
+  "schema": "omega.playground.layered-acceptance/1",
+  "embodiments": [
+    "g1",
+    "a3",
+    "h2",
+    "sih2300"
+  ],
+  "layer1": {
+    "motion": "walk3_subject3",
+    "start_frame": 1000,
+    "control_steps": 500,
+    "measured_heading": false,
+    "comparison": "bitwise",
+    "absolute_tolerance": 0.0,
+    "relative_tolerance": 0.0,
+    "reason": "Same GPU, native model builder, weights and operations: first require exact equality. No uncalibrated numerical allowance."
+  },
+  "production_results_are_not_acceptance": true,
+  "layer5": {
+    "scenes": [
+      "campus",
+      "obstacle"
+    ],
+    "require_previous_layers_passed": true
+  },
+  "layer4": {
+    "order": [
+      "support_only_fixed_motion",
+      "support_only_joystick",
+      "add_scene_geometry"
+    ],
+    "require_hash_pinned_collision": true
+  },
+  "layer3": {
+    "seeds": [
+      7,
+      17,
+      37
+    ],
+    "initial_yaws_rad": [
+      0.0,
+      1.5707963267948966
+    ],
+    "replan_control_steps": [
+      50,
+      120
+    ],
+    "commands": [
+      {
+        "name": "stand",
+        "seconds": 2,
+        "vx": 0.0,
+        "vy": 0.0,
+        "heading_delta": 0.0
+      },
+      {
+        "name": "straight",
+        "seconds": 4,
+        "vx": 0.5,
+        "vy": 0.0,
+        "heading_delta": 0.0
+      },
+      {
+        "name": "stop",
+        "seconds": 2,
+        "vx": 0.0,
+        "vy": 0.0,
+        "heading_delta": 0.0
+      },
+      {
+        "name": "turn90",
+        "seconds": 3,
+        "vx": 0.3,
+        "vy": 0.0,
+        "heading_delta": 1.5707963267948966
+      },
+      {
+        "name": "speed",
+        "seconds": 3,
+        "vx": 0.8,
+        "vy": 0.0,
+        "heading_delta": 0.0
+      },
+      {
+        "name": "turn180",
+        "seconds": 3,
+        "vx": 0.3,
+        "vy": 0.0,
+        "heading_delta": 3.141592653589793
+      },
+      {
+        "name": "final_stop",
+        "seconds": 2,
+        "vx": 0.0,
+        "vy": 0.0,
+        "heading_delta": 0.0
+      }
+    ]
+  },
+  "layer2": {
+    "seeds": [
+      7,
+      17,
+      37
+    ],
+    "motion_start_frames": [
+      1000,
+      1100
+    ],
+    "commands": [
+      {
+        "name": "stand",
+        "vx": 0,
+        "vy": 0,
+        "heading_delta": 0
+      },
+      {
+        "name": "straight",
+        "vx": 0.5,
+        "vy": 0,
+        "heading_delta": 0
+      },
+      {
+        "name": "speed",
+        "vx": 0.8,
+        "vy": 0,
+        "heading_delta": 0
+      },
+      {
+        "name": "stop",
+        "vx": 0,
+        "vy": 0,
+        "heading_delta": 0
+      },
+      {
+        "name": "left",
+        "vx": 0.3,
+        "vy": 0,
+        "heading_delta": 1.5707963267948966
+      },
+      {
+        "name": "right",
+        "vx": 0.3,
+        "vy": 0,
+        "heading_delta": -1.5707963267948966
+      },
+      {
+        "name": "reverse",
+        "vx": 0.3,
+        "vy": 0,
+        "heading_delta": 3.141592653589793
+      },
+      {
+        "name": "stop_again",
+        "vx": 0,
+        "vy": 0,
+        "heading_delta": 0
+      }
+    ],
+    "joint_limits": "authored MJCF limits",
+    "quaternion_norm_atol": 3.814697265625e-06,
+    "quaternion_tolerance_basis": "32 float32 eps for normalized quaternion output",
+    "response_thresholds": null,
+    "threshold_status": "No accepted command-error/slip/acceleration contract yet: report measurements, never infer pass."
+  }
+}

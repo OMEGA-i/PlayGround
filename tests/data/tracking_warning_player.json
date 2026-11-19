@@ -1,0 +1,8 @@
+{
+  "kind": "route_ffpd",
+  "route": [[0, 4], [10, 4]],
+  "schedule": {"trigger": "periodic", "period_s": 0.1},
+  "reference": {"nominal_speed": 0.65, "corner_radius": 3},
+  "divergence_m": 0.01,
+  "divergence_s": 0.1
+}

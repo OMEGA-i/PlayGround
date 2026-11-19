@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Omega · Playground 作业台</title><link rel="stylesheet" href="/style.css">
+<header><div><strong>OMEGA</strong> <span>Playground 作业台</span></div><div id="status" role="status">连接中</div></header>
+<main>
+<section class="ego-panel"><div class="simulation-toolbar"><h2>Ego View</h2><span id="ego-fps" class="video-fps" title="浏览器实际收到帧率 / 服务端实际渲染输出帧率">视频 0.0 / — FPS</span></div><p id="ego-wait">等待头部相机</p><img hidden id="ego-image" alt="头部相机"></section>
+<section class="map-panel"><div class="bar"><h1>Campus</h1><span id="clock">0.00 s</span></div>
+<div class="map-viewport"><canvas id="map" width="1200" height="900" aria-label="Campus 地图，依次点击添加导航点"></canvas></div>
+<p id="map-help">在地图上依次选点，再执行任务。</p></section>
+<aside>
+<details id="team-configuration"><summary>仿真配置</summary>
+<div class="bar"><label>场景 <select id="scene" disabled><option value="campus">Campus</option><option value="obstacle">Obstacle</option></select></label><button id="scene-apply" disabled>切换场景</button></div>
+<div class="bar"><label>工作流 <select id="wbc-policy"><option value="sonic" selected>SONIC</option><option value="supermimic" disabled>SuperMimic</option></select></label><button id="workflow-apply" disabled>切换工作流</button></div>
+<p class="hint">切换工作流需先暂停；进入该工作流保存的场景与机器人状态。</p>
+<div class="fields">
+<label>本体 <select id="embodiment"></select></label><label id="appearance-label">外观 <select id="avatar"><option value="g1">G1</option></select></label><label>装备 <select id="armed"><option value="false" selected>空手</option><option value="true">盾牌 + 警棍</option></select></label></div>
+<button id="team-config-apply" disabled>应用机器人配置</button>
+<p class="hint">切换场景或应用机器人配置会重建仿真，清除任务并回到起点。</p></details>
+<details id="simulation-control" class="card" open><summary>仿真控制</summary>
+<div class="bar"><strong id="team-summary">当前机器人</strong></div>
+<p id="pipeline-summary" class="hint"></p>
+
+<label>模式 <select id="control-mode" disabled><option value="auto">Auto · FFPD</option><option value="manual">Manual · 键盘</option></select></label>
+<div class="current-task"><p id="task-status">等待状态</p><button id="task-toggle" disabled>继续</button></div>
+<p id="task-hint" class="hint"></p>
+<p id="keyboard-help" hidden>W / S 前进、后退 · A / D 左转、右转。松键发送零速指令；暂停会停止仿真。</p>
+<div class="task-card task-draft"><h3>手绘轨迹</h3>
+<div id="navigation-panel"><p id="plan-info">在地图上选择目标，可连续添加多个点。</p></div>
+
+<p id="preview-status" class="hint" role="status" aria-live="polite"></p>
+<div class="row"><button id="task-submit" class="primary" disabled>执行任务</button><button id="draft-undo" class="quiet" disabled>撤销末点</button><button id="draft-clear" class="quiet" disabled>清空选点</button></div>
+<p id="execute-hint" class="hint">从当前位置出发，替换当前任务。</p></div>
+<div class="card"><h3>运动指令</h3><div class="fields"><label id="gait-label">步态 <select id="sonic-mode" disabled><option value="walk">Walk</option><option value="run">Run</option></select></label><label class="speed-slider"><span class="bar"><span>速度 (m/s)</span><output id="speed-value" for="sonic-speed">0.65</output></span><input id="sonic-speed" type="range" min="0.1" max="2" step="0.05" value="0.65" disabled><span class="bar hint"><span>0.10</span><span id="speed-max">2.00</span></span></label></div>
+<div class="bar"><p id="policy-quality" class="hint" hidden></p><p id="locomotion-status">等待运动参数</p></div><p id="motion-help" class="hint"></p></div>
+</details>
+
+<details class="card"><summary>恢复设置</summary><p>原地恢复：在失败位置恢复站立。原点恢复：回到本次任务开始时的位置。</p><div class="row"><button id="reset" disabled>原地恢复</button><button id="reset-origin" disabled>原点恢复</button></div><p id="reset-hint" class="hint"></p></details>
+<div id="message" role="status" aria-live="polite"></div>
+<details class="card"><summary>运行指标</summary><pre id="metrics"></pre></details>
+</aside>
+<section class="simulation-panel"><div class="simulation-toolbar"><h2>Main View</h2><span id="main-fps" class="video-fps" title="浏览器实际收到帧率 / 服务端实际渲染输出帧率">视频 0.0 / — FPS</span><div class="camera-controls"><label>相机 <select id="camera" disabled><option value="qc">固定近景</option><option value="chase">跟随</option><option value="top">俯视</option><option value="free">自由环绕</option></select></label>
+
+<div id="camera-orbit" hidden><label>方位角 <input id="yaw" type="range" min="-180" max="180" value="30"></label><label>俯仰角 <input id="pitch" type="range" min="-85" max="45" value="-12"></label><label>距离 <input id="distance" type="range" min="1" max="30" value="4"></label></div><p id="camera-hint" class="hint" hidden>选择后直接生效。</p></div></div><img id="viewer" alt="等待仿真画面"><video id="live-video" muted autoplay playsinline hidden></video></section><section class="events-panel"><h2>事件与回执</h2><pre id="events"></pre></section>
+</main><script src="/video.js"></script><script src="/workflow.js"></script><script src="/app.js"></script></html>

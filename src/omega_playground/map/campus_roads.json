@@ -1,0 +1,644 @@
+{
+  "schema": "omega.road-supplement/1",
+  "scene_sha256": "752186cd58cc14179944a4a7c4e2f3b3c0b31887fcd0373b3928801237a48770",
+  "source": "img2threejs perimeter revision 6 and pedestrian revision 8 (49dd382)",
+  "coordinates": "Z-up XY metres; producer XZ converted with y=-z",
+  "bounds": [
+    -130,
+    -172,
+    222,
+    229
+  ],
+  "goal_snap_limit_m": 4.0,
+  "notes": [
+    "Centers of the two 7 m carriageways, 5 m each side of the planted median.",
+    "All edges are rechecked against the frozen collision layer; this file grants no collision exemptions.",
+    "Outbound stubs stop 2 m before the asphalt end.",
+    "Pedestrian centerlines follow the user-marked court links, park meander and north garden bridge. Unavailable collision edges remain closed until the scene producer repairs support."
+  ],
+  "roads": [
+    {
+      "id": "boulevard-north-inner",
+      "points": [
+        [
+          -123.5,
+          192.5
+        ],
+        [
+          215.5,
+          192.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "boulevard-south-inner",
+      "points": [
+        [
+          -123.5,
+          -135.5
+        ],
+        [
+          215.5,
+          -135.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "boulevard-west-inner",
+      "points": [
+        [
+          -93.5,
+          -165.5
+        ],
+        [
+          -93.5,
+          222.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "boulevard-east-inner",
+      "points": [
+        [
+          185.5,
+          -165.5
+        ],
+        [
+          185.5,
+          222.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "boulevard-north-outer",
+      "points": [
+        [
+          -123.5,
+          202.5
+        ],
+        [
+          215.5,
+          202.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "boulevard-south-outer",
+      "points": [
+        [
+          -123.5,
+          -145.5
+        ],
+        [
+          215.5,
+          -145.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "boulevard-west-outer",
+      "points": [
+        [
+          -103.5,
+          -165.5
+        ],
+        [
+          -103.5,
+          222.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "boulevard-east-outer",
+      "points": [
+        [
+          195.5,
+          -165.5
+        ],
+        [
+          195.5,
+          222.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "boulevard-junction-nw-x",
+      "points": [
+        [
+          -103.5,
+          197.5
+        ],
+        [
+          -93.5,
+          197.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "boulevard-junction-nw-y",
+      "points": [
+        [
+          -98.5,
+          192.5
+        ],
+        [
+          -98.5,
+          202.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "boulevard-junction-ne-x",
+      "points": [
+        [
+          185.5,
+          197.5
+        ],
+        [
+          195.5,
+          197.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "boulevard-junction-ne-y",
+      "points": [
+        [
+          190.5,
+          192.5
+        ],
+        [
+          190.5,
+          202.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "boulevard-junction-sw-x",
+      "points": [
+        [
+          -103.5,
+          -140.5
+        ],
+        [
+          -93.5,
+          -140.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "boulevard-junction-sw-y",
+      "points": [
+        [
+          -98.5,
+          -145.5
+        ],
+        [
+          -98.5,
+          -135.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "boulevard-junction-se-x",
+      "points": [
+        [
+          185.5,
+          -140.5
+        ],
+        [
+          195.5,
+          -140.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "boulevard-junction-se-y",
+      "points": [
+        [
+          190.5,
+          -145.5
+        ],
+        [
+          190.5,
+          -135.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "gate-north",
+      "points": [
+        [
+          23,
+          193
+        ],
+        [
+          23,
+          222.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "gate-south",
+      "points": [
+        [
+          11,
+          -140
+        ],
+        [
+          11,
+          -165.5
+        ]
+      ],
+      "width": 7
+    },
+    {
+      "id": "walk-court-north",
+      "points": [
+        [
+          23,
+          111
+        ],
+        [
+          80,
+          111
+        ]
+      ],
+      "width": 2.8
+    },
+    {
+      "id": "walk-court-middle",
+      "points": [
+        [
+          23,
+          84
+        ],
+        [
+          80,
+          84
+        ]
+      ],
+      "width": 2.8
+    },
+    {
+      "id": "walk-court-south",
+      "points": [
+        [
+          23,
+          56
+        ],
+        [
+          80,
+          56
+        ]
+      ],
+      "width": 2.8
+    },
+    {
+      "id": "walk-court-east",
+      "points": [
+        [
+          80,
+          56
+        ],
+        [
+          80,
+          111
+        ]
+      ],
+      "width": 3
+    },
+    {
+      "id": "walk-park-meander",
+      "points": [
+        [
+          84.071084,
+          126
+        ],
+        [
+          84.07831,
+          125.7
+        ],
+        [
+          84.138327,
+          123.6
+        ],
+        [
+          84.214359,
+          121.5
+        ],
+        [
+          84.305573,
+          119.4
+        ],
+        [
+          84.410968,
+          117.3
+        ],
+        [
+          84.529391,
+          115.2
+        ],
+        [
+          84.659544,
+          113.1
+        ],
+        [
+          84.8,
+          111.0
+        ],
+        [
+          84.949221,
+          108.9
+        ],
+        [
+          85.105573,
+          106.8
+        ],
+        [
+          85.267341,
+          104.7
+        ],
+        [
+          85.432754,
+          102.6
+        ],
+        [
+          85.6,
+          100.5
+        ],
+        [
+          85.767246,
+          98.4
+        ],
+        [
+          85.932659,
+          96.3
+        ],
+        [
+          86.094427,
+          94.2
+        ],
+        [
+          86.250779,
+          92.1
+        ],
+        [
+          86.4,
+          90.0
+        ],
+        [
+          86.540456,
+          87.9
+        ],
+        [
+          86.670609,
+          85.8
+        ],
+        [
+          86.772883,
+          84
+        ],
+        [
+          86.789032,
+          83.7
+        ],
+        [
+          86.894427,
+          81.6
+        ],
+        [
+          86.985641,
+          79.5
+        ],
+        [
+          87.061673,
+          77.4
+        ],
+        [
+          87.12169,
+          75.3
+        ],
+        [
+          87.165036,
+          73.2
+        ],
+        [
+          87.191235,
+          71.1
+        ],
+        [
+          87.2,
+          69.0
+        ],
+        [
+          87.191235,
+          66.9
+        ],
+        [
+          87.165036,
+          64.8
+        ],
+        [
+          87.12169,
+          62.7
+        ],
+        [
+          87.061673,
+          60.6
+        ],
+        [
+          86.985641,
+          58.5
+        ],
+        [
+          86.894427,
+          56.4
+        ],
+        [
+          86.875412,
+          56
+        ],
+        [
+          86.789032,
+          54.3
+        ],
+        [
+          86.670609,
+          52.2
+        ],
+        [
+          86.540456,
+          50.1
+        ],
+        [
+          86.4,
+          48.0
+        ],
+        [
+          86.250779,
+          45.9
+        ],
+        [
+          86.094427,
+          43.8
+        ],
+        [
+          85.932659,
+          41.7
+        ],
+        [
+          85.767246,
+          39.6
+        ],
+        [
+          85.6,
+          37.5
+        ],
+        [
+          85.432754,
+          35.4
+        ],
+        [
+          85.267341,
+          33.3
+        ],
+        [
+          85.105573,
+          31.2
+        ],
+        [
+          84.949221,
+          29.1
+        ],
+        [
+          84.8,
+          27.0
+        ],
+        [
+          84.659544,
+          24.9
+        ],
+        [
+          84.529391,
+          22.8
+        ],
+        [
+          84.410968,
+          20.7
+        ],
+        [
+          84.305573,
+          18.6
+        ],
+        [
+          84.214359,
+          16.5
+        ],
+        [
+          84.138327,
+          14.4
+        ],
+        [
+          84.07831,
+          12.3
+        ],
+        [
+          84.034964,
+          10.2
+        ],
+        [
+          84.024308,
+          9.5
+        ],
+        [
+          84,
+          4
+        ]
+      ],
+      "width": 2.8
+    },
+    {
+      "id": "walk-court-park-111",
+      "points": [
+        [
+          80,
+          111
+        ],
+        [
+          84.8,
+          111
+        ]
+      ],
+      "width": 2.8
+    },
+    {
+      "id": "walk-court-park-84",
+      "points": [
+        [
+          80,
+          84
+        ],
+        [
+          86.772883,
+          84
+        ]
+      ],
+      "width": 2.8
+    },
+    {
+      "id": "walk-court-park-56",
+      "points": [
+        [
+          80,
+          56
+        ],
+        [
+          86.875412,
+          56
+        ]
+      ],
+      "width": 2.8
+    },
+    {
+      "id": "walk-north-garden-bridge",
+      "points": [
+        [
+          23,
+          157
+        ],
+        [
+          65,
+          157
+        ]
+      ],
+      "width": 2.5
+    }
+  ],
+  "scene_sha256s": [
+    "752186cd58cc14179944a4a7c4e2f3b3c0b31887fcd0373b3928801237a48770",
+    "5e33ec9ae98d6765ba0c07ecb26987ba29b97b283c0b9417c89bdabea7618415",
+    "0f26d54e0df6b65e590e39fd734e0542aa964f6368d5637526d432ae9baaecc8",
+    "ce4e27d8cae68e8b8f91cc9de4d631da336c989c9d162fc61cb4c8dddbb2b5fd",
+    "815a4ed265dfab8b4b549d649eb97a347ec9d2f7b2802b2b701193fcd415b849",
+    "12d5918e2bc6b27571d64acb0eafeb562c94d7b1d6b376e1b368bc7ab9c767bd",
+    "04ff1258e339e9c621d1cf36d05db18307b4acb12d83cba5da07ac47d23e134e"
+  ]
+}

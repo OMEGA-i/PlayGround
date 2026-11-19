@@ -1,0 +1,6 @@
+# Diagnostic overlay only; not the live service's dependency set.
+mujoco-warp==4.0.0
+mujoco==4.0.0
+mujoco-core==4.0.0
+mujoco-studio==4.0.0
+warp-lang==1.19.0

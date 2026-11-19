@@ -1,0 +1,41 @@
+{
+  "schema": "omega.prepared-runtime/1",
+  "entries": [
+    {
+      "scene_sha256": "ce4e27d8cae68e8b8f91cc9de4d631da336c989c9d162fc61cb4c8dddbb2b5fd",
+      "policy_sha256": "118ba9eacd40d8874a674a076684033d531d74690c93656afc9a5bf366f2c138",
+      "physics_asset": "../artifacts/mjwarp-physics/g1-campus",
+      "visual_model": "../artifacts/mjwarp/g1-VibeCampus-v20261013",
+      "armed": false,
+      "num_agents": 1,
+      "avatar": "g1"
+    },
+    {
+      "scene_sha256": "426b6be4d0b6dffaaf2806cbe987a52ea261358734b432efd253e420ffccae95",
+      "policy_sha256": "118ba9eacd40d8874a674a076684033d531d74690c93656afc9a5bf366f2c138",
+      "physics_asset": "../artifacts/mjwarp-physics/g1-obstacle",
+      "visual_model": "../artifacts/mjwarp/g1-VibeObstacle-v20261103",
+      "armed": false,
+      "num_agents": 1,
+      "avatar": "g1"
+    },
+    {
+      "scene_sha256": "ce4e27d8cae68e8b8f91cc9de4d631da336c989c9d162fc61cb4c8dddbb2b5fd",
+      "policy_sha256": "118ba9eacd40d8874a674a076684033d531d74690c93656afc9a5bf366f2c138",
+      "physics_asset": "../artifacts/mjwarp-physics/g1-campus",
+      "visual_model": "../artifacts/mjwarp/g1-VibeCampus-v20261013-armed",
+      "armed": true,
+      "num_agents": 1,
+      "avatar": "g1"
+    },
+    {
+      "scene_sha256": "426b6be4d0b6dffaaf2806cbe987a52ea261358734b432efd253e420ffccae95",
+      "policy_sha256": "118ba9eacd40d8874a674a076684033d531d74690c93656afc9a5bf366f2c138",
+      "physics_asset": "../artifacts/mjwarp-physics/g1-obstacle",
+      "visual_model": "../artifacts/mjwarp/g1-VibeObstacle-v20261103-armed",
+      "armed": true,
+      "num_agents": 1,
+      "avatar": "g1"
+    }
+  ]
+}

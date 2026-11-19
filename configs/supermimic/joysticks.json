@@ -1,0 +1,66 @@
+{
+  "a3": {
+    "pose": {
+      "path": "runs/a3/fsq100k_25fps/pose/best.ckpt",
+      "sha256": "356b427a00365bdc99881a4b40b9b573d534f2fd35e0b92fa929410d3124758e",
+      "step": 100000
+    },
+    "root": {
+      "path": "runs/a3/fsq100k_25fps/root/best.ckpt",
+      "sha256": "3cd61e8dfca614c763247e87600bc36b766d17a5d8fefb8540e4d02547e605a9",
+      "step": 25000
+    },
+    "tokenizer": {
+      "path": "runs/a3/fsq100k_25fps/tokenizer/last.ckpt",
+      "sha256": "9bbe8b5e21a0bf211147185337b043fb4e4dcac5b03b835066d97608f3bd4d2e"
+    }
+  },
+  "g1": {
+    "pose": {
+      "path": "runs/g1/fsq100k_25fps/pose/best.ckpt",
+      "sha256": "1d611e8a6973fd7e73d7d2eb0f1a2d3f4d8ac0b5d139dd71f8496f39fbc16175",
+      "step": 55000
+    },
+    "root": {
+      "path": "runs/g1/fsq100k_25fps/root/best.ckpt",
+      "sha256": "adb3fa4b4205d7ce5e093abb0e33e3ee844e512aa8c95fcc3a987d490a53b87a",
+      "step": 25000
+    },
+    "tokenizer": {
+      "path": "runs/g1/fsq100k_25fps/tokenizer/last.ckpt",
+      "sha256": "ffa3da5e59c9e3be528b603b1957de38f4290bc0f18147e0330eee679f51bb11"
+    }
+  },
+  "h2": {
+    "pose": {
+      "path": "playground-deliveries/h2/20261103/pose.ckpt",
+      "sha256": "52991ce10c890c00513f1ec9d230458aee415d762bd786f762195a0a46df6c59",
+      "step": 20000
+    },
+    "root": {
+      "path": "playground-deliveries/h2/20261103/root.ckpt",
+      "sha256": "07ca968363cc5353fd8d146fba70b31619548a7e8a65a08e6db44490f28161db",
+      "step": 35000
+    },
+    "tokenizer": {
+      "path": "runs/h2/fsq100k_25fps/tokenizer/last.ckpt",
+      "sha256": "4df5a9fe28b76b82e746e3bd95f1f101e64c42c485796b82896bc4394f1051d2"
+    }
+  },
+  "sih2300": {
+    "pose": {
+      "path": "runs/sih2300/fsq100k_25fps/pose/best.ckpt",
+      "sha256": "c585fb3b415760e9a02efe86a6cc95b3dbf93e7cb531de9eef727834ab7cbc3f",
+      "step": 100000
+    },
+    "root": {
+      "path": "runs/sih2300/fsq100k_25fps/root/best.ckpt",
+      "sha256": "b354414e3ce517e55cb35076590cbaec052e11a409c3055edac9fde7cece41e2",
+      "step": 90000
+    },
+    "tokenizer": {
+      "path": "runs/sih2300/fsq100k_25fps/tokenizer/last.ckpt",
+      "sha256": "97ad1489745e20ebdabafe7e48f7245e3b0bb66a36eaf5f8c0d0dbc767c8d7fe"
+    }
+  }
+}

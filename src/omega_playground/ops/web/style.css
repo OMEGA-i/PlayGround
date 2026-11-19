@@ -1,0 +1,66 @@
+:root{font:15px/1.55 system-ui,sans-serif;color:#e5edf6;background:#111820;color-scheme:dark}*{box-sizing:border-box}body{margin:0}header{height:72px;padding:0 30px;background:#18222e;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #334255}header strong{letter-spacing:.18em;color:#79dec7;margin-right:22px}header span{color:#b4c3d4}main{max-width:1600px;margin:auto;padding:24px;display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px}h1{font-size:20px;margin:0}h2{font-size:16px;margin:0 0 12px}.bar,.row{display:flex;justify-content:space-between;gap:10px;align-items:center}.map-panel,aside,.simulation-panel,.events-panel{min-width:0;background:#18222e;padding:20px;border:1px solid #334255;border-radius:12px}canvas{width:100%;height:auto;margin-top:16px;background:#202c36;cursor:crosshair}p{font-size:13px;color:#a4b5c8}button,select{font:inherit;border:1px solid #43566c;border-radius:6px;background:#263749;padding:8px 12px;color:inherit}button{cursor:pointer;margin:4px 0}button:hover{background:#36516a}button:disabled{opacity:.4;cursor:default}label{display:block;margin:10px 0}.card{border-top:1px solid #334255;padding-top:18px;margin-top:18px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}.events-panel{display:flex;flex-direction:column;min-height:0;contain:size}.events-panel h2{flex:none}#events{margin:0;flex:1;min-height:0;height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable}#viewer,#live-video{display:block;width:100%;height:auto}#viewer[hidden],#live-video[hidden]{display:none}#message{color:#ffcf80;white-space:pre-wrap;margin-top:12px}@media(max-width:900px){main{grid-template-columns:1fr}aside{grid-row:2}}
+@media(max-width:900px){.events-panel{contain:none}#events{flex:none;height:280px}}
+[hidden]{display:none!important}.primary{background:#24645b;border-color:#4a9989}.primary:hover{background:#317f72}.quiet{background:transparent;color:#b4c3d4}.current-task{display:flex;align-items:center;justify-content:space-between;gap:12px}.current-task p{margin:0;color:#e5edf6}.current-task button{flex-shrink:0}.task-draft{border-top:1px solid #334255;margin-top:14px;padding-top:8px}.hint{font-size:12px;margin:6px 0;color:#92a6bc}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fields input,.fields select{width:100%}input[type=number]{font:inherit;padding:8px;border:1px solid #43566c;border-radius:6px;background:#263749;color:inherit;min-width:0}summary{cursor:pointer;font-weight:600}details[open] summary{margin-bottom:10px}#task-submit{flex:1}#message:empty,#task-hint:empty{display:none}#locomotion-status{font-size:12px}#team-picker{margin:0}#camera-orbit input{width:100%}.map-panel{align-self:start}#map-help{margin-bottom:0}
+
+#preview-status:empty{display:none}#preview-status[data-status=ready]{color:#79dec7}#preview-status[data-status=error]{color:#ffcf80}
+.task-draft>.row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.task-draft>.row>.primary{grid-column:1/-1}.task-draft>.row>button{white-space:nowrap}
+
+/* Desktop workstation: map, live view and controls share one viewport. */
+@media(min-width:1000px){
+  :root{font-size:13px;line-height:1.4}
+  body{height:100dvh;overflow:hidden}
+  header{height:48px;padding:0 18px}
+  main{max-width:none;height:calc(100dvh - 48px);padding:12px;gap:12px;
+    grid-template-columns:minmax(260px,.85fr) minmax(320px,1.2fr) 292px;
+    grid-template-rows:minmax(0,1fr) 130px}
+  .map-panel,aside,.simulation-panel,.events-panel{padding:12px;min-height:0;border-radius:9px}
+  .map-panel{grid-column:1;grid-row:1/3;align-self:stretch;display:flex;flex-direction:column}
+  .map-viewport{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:10px}
+  .map-viewport canvas{margin:0;flex:none}
+  #map-help{font-size:11px;line-height:1.45;margin-top:8px}
+  aside{grid-column:3;grid-row:1/3;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+  .simulation-panel{grid-column:2;grid-row:1;display:flex;flex-direction:column;overflow:hidden}
+  .simulation-panel h2{flex:none}
+  #viewer,#live-video{flex:1;min-height:0;height:0;object-fit:contain;background:#0d141b}
+  .events-panel{grid-column:2;grid-row:2;contain:strict}
+  .events-panel h2{font-size:12px;margin-bottom:6px;color:#a4b5c8}
+  #events{font-size:11px;line-height:1.5}
+  h1{font-size:16px}h2{font-size:14px;margin-bottom:8px}
+  .card{padding-top:10px;margin-top:10px}
+  label{margin:6px 0}p{font-size:12px;margin:7px 0}
+  button,select{padding:6px 8px}input[type=number]{padding:6px}
+  .fields{gap:8px}.hint{font-size:11px;margin:4px 0}
+  .task-draft{margin-top:8px;padding-top:4px}
+  .bar,.row{gap:6px}#team-configuration{margin-bottom:10px}
+  #message{font-size:12px;margin-top:6px}
+}
+@media(max-width:999px){
+  main{grid-template-columns:minmax(0,1fr) 280px;gap:12px;padding:12px}
+  .map-panel{grid-column:1;grid-row:1}.simulation-panel{grid-column:1;grid-row:2}
+  aside{grid-column:2;grid-row:1/3}.events-panel{grid-column:1/-1;contain:none}
+  #events{flex:none;height:120px}.map-viewport canvas{max-width:100%}
+}
+@media(max-width:640px){
+  main{grid-template-columns:1fr}.map-panel,.simulation-panel,aside,.events-panel{grid-column:1;grid-row:auto}
+  .simulation-panel{grid-row:2}aside{grid-row:3}header{padding:0 14px;height:52px}
+}
+
+.simulation-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;flex:none}
+.simulation-toolbar h2{margin:0}.camera-controls>label{display:inline-block;margin:0 0 0 6px}
+.camera-controls select{padding:4px 6px}#camera-orbit{display:flex;gap:8px;flex-wrap:wrap}#camera-orbit label{flex:1;min-width:70px}
+
+.ego-panel{min-height:0;background:#18222e;padding:12px;border:1px solid #334255;border-radius:9px}
+#map{touch-action:none}
+@media(min-width:1000px){
+ main{grid-template-rows:minmax(0,1fr) minmax(0,1fr) 88px}
+ .ego-panel{grid-area:1/1}.map-panel{grid-column:1;grid-row:2/4}
+ .simulation-panel{grid-row:1/3}.events-panel{grid-row:3}aside{grid-row:1/4}
+}
+
+#ego-image{width:100%;height:calc(100% - 28px);object-fit:contain}
+
+.video-fps{font-size:12px;color:#a4b5c8;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+.speed-slider{grid-column:1/-1}.speed-slider input{accent-color:#79dec7;margin:10px 0 2px;cursor:pointer}.speed-slider input:disabled{cursor:default}.speed-slider output{font-variant-numeric:tabular-nums;color:#79dec7}
+
+#simulation-control h3{font-size:12px;margin:0 0 8px;color:#b4c3d4}aside>details>summary{font-size:14px}#simulation-control>.bar{margin-top:10px}
